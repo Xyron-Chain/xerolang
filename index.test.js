@@ -1,4 +1,4 @@
-const Zerolang = require('./Xerolang'); // Adjust the path as needed
+const Xerolang = require('./Xerolang'); // Adjust the path as needed
 
 describe('Xerolang', () => {
     const xerolang = new Xerolang();
