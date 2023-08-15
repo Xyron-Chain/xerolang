@@ -1,0 +1,26 @@
+{
+  "name": "zerolang",
+  "version": "1.0.0",
+  "description": "Smart contract language for Xyron Chain",
+  "main": "Zerolang.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Xyron-Chain/xerolang.git"
+  },
+  "keywords": [
+    "Xerolang",
+    "XRN"
+  ],
+  "author": "ktshacx",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Xyron-Chain/xerolang/issues"
+  },
+  "homepage": "https://github.com/Xyron-Chain/xerolang#readme",
+  "dependencies": {
+    "jest": "^29.6.2"
+  }
+}
