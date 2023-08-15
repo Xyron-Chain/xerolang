@@ -1,8 +1,8 @@
 {
-  "name": "zerolang",
+  "name": "xerolang",
   "version": "1.0.0",
   "description": "Smart contract language for Xyron Chain",
-  "main": "Zerolang.js",
+  "main": "Xerolang.js",
   "scripts": {
     "test": "jest"
   },
