@@ -1,4 +1,4 @@
-class Zerolang {
+class Xerolang {
     tokenMap = {
         '=': 'EQ',
         '+': 'ADD',
@@ -79,4 +79,4 @@ class Zerolang {
     }
 }
 
-module.exports = Zerolang;
+module.exports = Xerolang;
