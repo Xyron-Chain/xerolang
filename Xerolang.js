@@ -6,7 +6,8 @@ class Xerolang {
         '*': 'MUL',
         '/': 'DIV',
         'log': 'LOG',
-        ';': 'NEXT'
+        ';': 'NEXT',
+        'input': 'INPUT'
     };
 
     tokenize(inputCode) {
@@ -23,12 +24,21 @@ class Xerolang {
         return tokens;
     }
 
-    execute(tokenizedCode) {
+    execute(tokenizedCode, input = []) {
         const variables = {};
-        let currentVariable = '';
         let result = [];
+        let error = "";
 
         for(let i = 0; i < tokenizedCode.length; i++){
+            if(tokenizedCode[i] == 'INPUT'){
+                if(input[0]){
+                    variables[tokenizedCode[i+1]] = input[0];
+                    input.splice(0, 1);
+                }else{
+                    error = "NO INPUT FOUND FOR VARIABLE " + tokenizedCode[i+1];
+                    return
+                }
+            }
             if(tokenizedCode[i] == 'ADD') {
                 tokenizedCode[i] = Number(variables[tokenizedCode[i-1]]) + Number(variables[tokenizedCode[i+1]]); 
                 tokenizedCode.splice(i-1, 1);
@@ -75,7 +85,7 @@ class Xerolang {
             }
         }
 
-        return result;
+        return error !== "" ? {error: error} : result;
     }
 }
 

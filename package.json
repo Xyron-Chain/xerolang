@@ -1,6 +1,6 @@
 {
   "name": "xerolang",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Smart contract language for Xyron Chain",
   "main": "Xerolang.js",
   "scripts": {

@@ -16,4 +16,12 @@ describe('Xerolang', () => {
         const expectedResult = [10];
         expect(result).toEqual(expectedResult);
     });
+
+    test('Execution - Input', () => {
+        let tokenizedCode = ["INPUT", "a", "NEXT", "LOG", "a", "NEXT"];
+        let input = [10]
+        const result = xerolang.execute(tokenizedCode, input);
+        const expectedResult = [10];
+        expect(result).toEqual(expectedResult);
+    })
 });
